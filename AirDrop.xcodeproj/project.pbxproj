@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		453870521F7F47BE0024678A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 453870511F7F47BE0024678A /* AppDelegate.swift */; };
-		453870541F7F47BE0024678A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 453870531F7F47BE0024678A /* ViewController.swift */; };
+		453870541F7F47BE0024678A /* AirdropViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 453870531F7F47BE0024678A /* AirdropViewController.swift */; };
 		453870571F7F47BE0024678A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 453870551F7F47BE0024678A /* Main.storyboard */; };
 		453870591F7F47BE0024678A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 453870581F7F47BE0024678A /* Assets.xcassets */; };
 		4538705C1F7F47BE0024678A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4538705A1F7F47BE0024678A /* LaunchScreen.storyboard */; };
@@ -17,11 +17,17 @@
 /* Begin PBXFileReference section */
 		4538704E1F7F47BE0024678A /* AirDrop.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AirDrop.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		453870511F7F47BE0024678A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		453870531F7F47BE0024678A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		453870531F7F47BE0024678A /* AirdropViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AirdropViewController.swift; sourceTree = "<group>"; };
 		453870561F7F47BE0024678A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		453870581F7F47BE0024678A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4538705B1F7F47BE0024678A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4538705D1F7F47BE0024678A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		453870661F7F48580024678A /* camera-photo-tips.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = "camera-photo-tips.html"; sourceTree = "<group>"; };
+		453870671F7F48580024678A /* Hello World.ppt */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Hello World.ppt"; sourceTree = "<group>"; };
+		453870681F7F48580024678A /* 10 Great iPhone Tips.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = "10 Great iPhone Tips.pdf"; sourceTree = "<group>"; };
+		453870691F7F48580024678A /* foggy.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = foggy.jpg; sourceTree = "<group>"; };
+		4538706A1F7F48590024678A /* Why Appcoda.doc */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Why Appcoda.doc"; sourceTree = "<group>"; };
+		4538706B1F7F48590024678A /* no more complaint.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "no more complaint.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,14 +60,44 @@
 		453870501F7F47BE0024678A /* AirDrop */ = {
 			isa = PBXGroup;
 			children = (
-				453870511F7F47BE0024678A /* AppDelegate.swift */,
-				453870531F7F47BE0024678A /* ViewController.swift */,
-				453870551F7F47BE0024678A /* Main.storyboard */,
-				453870581F7F47BE0024678A /* Assets.xcassets */,
-				4538705A1F7F47BE0024678A /* LaunchScreen.storyboard */,
-				4538705D1F7F47BE0024678A /* Info.plist */,
+				453870631F7F47CE0024678A /* Resources */,
+				453870641F7F47D60024678A /* View */,
+				453870651F7F47DC0024678A /* Controller */,
 			);
 			path = AirDrop;
+			sourceTree = "<group>";
+		};
+		453870631F7F47CE0024678A /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				453870581F7F47BE0024678A /* Assets.xcassets */,
+				4538705D1F7F47BE0024678A /* Info.plist */,
+				4538706B1F7F48590024678A /* no more complaint.png */,
+				4538706A1F7F48590024678A /* Why Appcoda.doc */,
+				453870681F7F48580024678A /* 10 Great iPhone Tips.pdf */,
+				453870661F7F48580024678A /* camera-photo-tips.html */,
+				453870691F7F48580024678A /* foggy.jpg */,
+				453870671F7F48580024678A /* Hello World.ppt */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		453870641F7F47D60024678A /* View */ = {
+			isa = PBXGroup;
+			children = (
+				4538705A1F7F47BE0024678A /* LaunchScreen.storyboard */,
+				453870551F7F47BE0024678A /* Main.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		453870651F7F47DC0024678A /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				453870511F7F47BE0024678A /* AppDelegate.swift */,
+				453870531F7F47BE0024678A /* AirdropViewController.swift */,
+			);
+			path = Controller;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -136,7 +172,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				453870541F7F47BE0024678A /* ViewController.swift in Sources */,
+				453870541F7F47BE0024678A /* AirdropViewController.swift in Sources */,
 				453870521F7F47BE0024678A /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -275,8 +311,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 9H46LQG73T;
-				INFOPLIST_FILE = AirDrop/Info.plist;
+				DEVELOPMENT_TEAM = "";
+				INFOPLIST_FILE = "$(SRCROOT)/AirDrop/Resources/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.DevXris.AirDrop;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -290,8 +326,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 9H46LQG73T;
-				INFOPLIST_FILE = AirDrop/Info.plist;
+				DEVELOPMENT_TEAM = "";
+				INFOPLIST_FILE = "$(SRCROOT)/AirDrop/Resources/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.DevXris.AirDrop;
 				PRODUCT_NAME = "$(TARGET_NAME)";
