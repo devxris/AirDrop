@@ -32,10 +32,14 @@ class DetailViewController: UIViewController {
 		navigationItem.largeTitleDisplayMode = .automatic
 	}
 	
-	func fileToURL(file: String) -> URL? {
+	private func fileToURL(file: String) -> URL? {
 		// Get the full path of the file
 		let fileComponents = file.components(separatedBy: ".")
-		guard let filePath = Bundle.main.path(forResource: fileComponents[0], ofType: fileComponents[1]) else { return nil }
+		let file: (name: String, ext: String) = (fileComponents[0], fileComponents[1])
+		guard let filePath = Bundle.main.path(forResource: file.name, ofType: file.ext) else { return nil }
 		return URL(fileURLWithPath: filePath)
+	}
+	
+	@IBAction func share(_ sender: UIBarButtonItem) {
 	}
 }

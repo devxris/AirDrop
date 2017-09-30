@@ -57,11 +57,25 @@
                                     <wkPreferences key="preferences"/>
                                 </wkWebViewConfiguration>
                             </wkWebView>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ysj-Z9-5tt">
+                                <rect key="frame" x="0.0" y="763" width="375" height="49"/>
+                                <items>
+                                    <barButtonItem width="30" style="plain" systemItem="fixedSpace" id="KDK-tx-PLY"/>
+                                    <barButtonItem systemItem="action" id="hRj-Oi-rJh">
+                                        <connections>
+                                            <action selector="share:" destination="VYD-3v-myU" id="Vnd-KF-CB4"/>
+                                        </connections>
+                                    </barButtonItem>
+                                </items>
+                            </toolbar>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstItem="ysj-Z9-5tt" firstAttribute="leading" secondItem="Eeq-71-J5I" secondAttribute="leading" id="2D2-MV-6Oa"/>
                             <constraint firstItem="Eeq-71-J5I" firstAttribute="leading" secondItem="mSf-gG-Oig" secondAttribute="leading" id="Eci-Wh-y20"/>
+                            <constraint firstItem="ysj-Z9-5tt" firstAttribute="trailing" secondItem="Eeq-71-J5I" secondAttribute="trailing" id="gA7-qU-b0L"/>
                             <constraint firstItem="Eeq-71-J5I" firstAttribute="bottom" secondItem="mSf-gG-Oig" secondAttribute="bottom" id="hqW-R7-TqB"/>
+                            <constraint firstAttribute="bottom" secondItem="ysj-Z9-5tt" secondAttribute="bottom" id="knB-m7-hHd"/>
                             <constraint firstItem="Eeq-71-J5I" firstAttribute="top" secondItem="mSf-gG-Oig" secondAttribute="top" id="tF3-0a-6Rg"/>
                             <constraint firstItem="Eeq-71-J5I" firstAttribute="trailing" secondItem="mSf-gG-Oig" secondAttribute="trailing" id="uxk-bp-8Om"/>
                         </constraints>
