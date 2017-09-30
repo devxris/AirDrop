@@ -41,5 +41,11 @@ class DetailViewController: UIViewController {
 	}
 	
 	@IBAction func share(_ sender: UIBarButtonItem) {
+		guard let fileURL = fileToURL(file: filename) else { return }
+		let objectsToShare = [fileURL]
+		let activityController = UIActivityViewController(activityItems: objectsToShare, applicationActivities: nil)
+		let excluededActivities = [UIActivityType.postToTencentWeibo, .postToTwitter]
+		activityController.excludedActivityTypes = excluededActivities
+		present(activityController, animated: true, completion: nil)
 	}
 }
