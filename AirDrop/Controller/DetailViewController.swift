@@ -10,7 +10,7 @@ import UIKit
 import WebKit
 
 class DetailViewController: UIViewController {
-
+	
 	@IBOutlet weak var webView: WKWebView!
 	
 	var filename = ""
@@ -18,10 +18,18 @@ class DetailViewController: UIViewController {
 	override func viewDidLoad() {
 		super.viewDidLoad()
 		
+		navigationController?.navigationBar.prefersLargeTitles = false
+		navigationItem.largeTitleDisplayMode = .automatic
+		
 		// Get the full path of the file
 		guard let fileURL = fileToURL(file: filename) else { return }
 		let urlRequest = URLRequest(url: fileURL)
 		webView.load(urlRequest)
+	}
+	
+	override func viewWillDisappear(_ animated: Bool) {
+		navigationController?.navigationBar.prefersLargeTitles = true
+		navigationItem.largeTitleDisplayMode = .automatic
 	}
 	
 	func fileToURL(file: String) -> URL? {
