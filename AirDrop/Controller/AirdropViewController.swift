@@ -53,4 +53,20 @@ class AirdropViewController: UITableViewController {
 		cell.imageView?.image = UIImage(named: "icon\(indexPath.row)")
 		return cell
 	}
+	
+	// MARK: Navigation
+	override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+		if segue.identifier == "ShowFileDetail" {
+			guard let detailViewController = segue.destination.contentViewController as? DetailViewController else { return }
+			guard let selectedIndexPath = tableView.indexPathForSelectedRow else { return }
+			detailViewController.filename = filenames[selectedIndexPath.row]
+		}
+	}
+}
+
+extension UIViewController {
+	var contentViewController: UIViewController? {
+		guard let naviCon = self.navigationController else { return self }
+		return naviCon.visibleViewController ?? self
+	}
 }
